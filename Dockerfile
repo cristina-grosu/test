@@ -13,4 +13,4 @@ ADD init-docker.sh /opt
 RUN chmod 777 /opt/init-docker.sh && \
     source /opt/init-docker.sh
  
- ENTRYPOINT ["/bin/sh", "-c" , "while true; do echo; sleep 1000; done;"]
+ENTRYPOINT ["/bin/sh", "-c" , "while true; do echo; sleep 1000; done;"]
