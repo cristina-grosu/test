@@ -7,9 +7,7 @@ ENV OS_PACKAGES=${OS_PACKAGES:-'vim'}
 ARG NOTEBOOK_INFO
 ENV NOTEBOOK_INFO=${NOTEBOOK_INFO:-'0.1.0'}
 
-RUN pip install $PIP_PACKAGES
-RUN apt-get install -y $OS_PACKAGES
-ADD init-docker.sh /opt
-RUN chmod 777 /opt/init-docker.sh
+RUN pip install $PIP_PACKAGES && \
+    apt-get install -y $OS_PACKAGES
 
 ENTRYPOINT ["/bin/sh", "-c" , "echo hello"]
