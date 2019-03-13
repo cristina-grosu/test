@@ -1,4 +1,4 @@
-FROM docker.io/bigstepinc/jupyter_bdl:2.4.0-7
+lFROM docker.io/bigstepinc/jupyter_bdl:2.4.0-7
 
 ARG PIP_PACKAGES
 ENV PIP_PACKAGES=${PIP_PACKAGES:-'plotly'}
@@ -13,4 +13,4 @@ ADD init-docker.sh /opt
 RUN chmod 777 /opt/init-docker.sh && \
     source /opt/init-docker.sh
  
-ENTRYPOINT ["/bin/sh", "-c" , "while true; do echo; sleep 1000; done;"]
+ENTRYPOINT ["/bin/sh", "-c" , "echo hello"]
