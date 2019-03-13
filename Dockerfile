@@ -1,4 +1,4 @@
-lFROM docker.io/bigstepinc/jupyter_bdl:2.4.0-7
+FROM docker.io/bigstepinc/jupyter_bdl:2.4.0-7
 
 ARG PIP_PACKAGES
 ENV PIP_PACKAGES=${PIP_PACKAGES:-'plotly'}
